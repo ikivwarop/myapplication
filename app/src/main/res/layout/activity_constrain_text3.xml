@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstrainText3"
+
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/kivaro"
+        android:text="Kivaro"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@drawable/btn_util3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/baseline" />
+
+
+    <ImageView
+        android:id="@+id/baseline"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_grid_view_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/kivaro"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/surname_input"
+        android:hint="surname"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:padding="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_util"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kivaro"
+        app:layout_constraintEnd_toStartOf="@id/first_name_input"
+
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_name_input"
+        android:hint="first name"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_util"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/surname_input"
+        app:layout_constraintTop_toBottomOf="@id/kivaro"
+        app:layout_constraintEnd_toStartOf="@id/last_name_input"
+        android:layout_marginBottom="5dp"
+
+        android:padding="16dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_name_input"
+        android:hint="last name"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_util"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/kivaro"
+        app:layout_constraintStart_toEndOf="@id/first_name_input"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginBottom="5dp"
+        android:padding="16dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/email_address_input"
+        android:hint="email address"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/btn_util"
+        app:layout_constraintTop_toBottomOf="@id/surname_input"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/phone_number_input"
+        android:hint="phone number"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/btn_util"
+        app:layout_constraintTop_toBottomOf="@id/email_address_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:padding="16dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/user_name_input"
+        android:hint="username"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:background="@drawable/btn_util"
+        app:layout_constraintTop_toBottomOf="@id/phone_number_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sex_dropdown_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Sex"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:layout_constraintTop_toBottomOf="@id/user_name_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/body_type_dropdown_layout"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/sex_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="body type"
+    android:id="@+id/body_type_dropdown_layout"
+    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    app:layout_constraintTop_toBottomOf="@id/user_name_input"
+    app:layout_constraintStart_toEndOf="@id/sex_dropdown_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="25dp"
+    app:layout_constraintHorizontal_weight="1"
+    android:layout_marginEnd="10dp">
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+
+<RadioGroup
+        android:id="@+id/gender_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/sex_dropdown_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp">
+
+        <RadioButton
+            android:id="@+id/male_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="32dp"/>
+
+        <RadioButton
+            android:id="@+id/female_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sign in"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:id="@+id/signin_label"
+        app:layout_constraintTop_toTopOf="@id/form_divider"
+        app:layout_constraintBottom_toBottomOf="@id/form_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_util"/>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/form_divider"
+        app:layout_constraintGuide_percent="0.90"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

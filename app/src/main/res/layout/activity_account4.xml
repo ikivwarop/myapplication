@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity4">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="63dp"
+       android:layout_height="64dp"
+       android:orientation="vertical"
+       android:layout_marginTop="55dp"
+       android:layout_marginStart="35dp"
+       android:id="@+id/picture_container"
+       android:background="@drawable/profile_picture"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+       <ImageView
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:src="@drawable/baseline_grid_view_24"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jeevithram N K"
+        android:id="@+id/jeevithram_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/picture_container"
+        app:layout_constraintTop_toTopOf="@id/picture_container"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/vector"
+        app:layout_constraintStart_toEndOf="@id/jeevithram_label"
+        app:layout_constraintTop_toTopOf="@id/jeevithram_label"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jeevithram@gmail.com"
+        android:id="@+id/gmail_label"
+        app:layout_constraintTop_toBottomOf="@id/jeevithram_label"
+        app:layout_constraintStart_toStartOf="@id/jeevithram_label"
+        android:layout_marginTop="4dp"/>
+
+      <ScrollView
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:orientation="vertical"
+          android:layout_marginTop="5dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/gmail_label"
+          app:layout_constraintBottom_toTopOf="@id/bottom_nav">
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/first_divider"
+        android:layout_marginTop="30dp"
+        android:background="#ECE8E8"/>
+
+
+
+
+ <ImageView
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:src="@drawable/orders"
+        android:id="@+id/orders"
+     app:layout_constraintTop_toBottomOf="@id/first_divider"
+     app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orders"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/orders"
+        app:layout_constraintTop_toTopOf="@id/orders"
+        app:layout_constraintBottom_toBottomOf="@id/orders"
+        android:layout_marginStart="18dp"/>
+    
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="16dp"
+        android:src="@drawable/backarro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/orders"
+        app:layout_constraintBottom_toBottomOf="@id/orders"
+        android:layout_marginEnd="20dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/orders"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/second_divider"
+        android:layout_marginTop="30dp"
+        android:background="#ECE8E8"/>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:src="@drawable/mydetails"
+        android:id="@+id/mydetails"
+        app:layout_constraintTop_toBottomOf="@id/second_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Details"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/mydetails"
+        app:layout_constraintTop_toTopOf="@id/mydetails"
+        app:layout_constraintBottom_toBottomOf="@id/mydetails"
+        android:layout_marginStart="18dp"/>
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="16dp"
+        android:src="@drawable/backarro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mydetails"
+        app:layout_constraintBottom_toBottomOf="@id/mydetails"
+        android:layout_marginEnd="20dp"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/mydetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/third_divider"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#ECE8E8"/>
+
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:src="@drawable/delivery"
+        android:id="@+id/delivery"
+        app:layout_constraintTop_toBottomOf="@id/third_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery Address"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/delivery"
+        app:layout_constraintTop_toTopOf="@id/delivery"
+        app:layout_constraintBottom_toBottomOf="@id/delivery"
+        android:layout_marginStart="18dp"/>
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="16dp"
+        android:src="@drawable/backarro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/delivery"
+        app:layout_constraintBottom_toBottomOf="@id/delivery"
+        android:layout_marginEnd="20dp"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/delivery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/fourth_divider"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#ECE8E8"/>
+
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:src="@drawable/payment"
+        android:id="@+id/payment"
+        app:layout_constraintTop_toBottomOf="@id/fourth_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Method"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/payment"
+        app:layout_constraintTop_toTopOf="@id/payment"
+        app:layout_constraintBottom_toBottomOf="@id/payment"
+        android:layout_marginStart="18dp"/>
+
+    <ImageView
+        android:layout_width="9dp"
+        android:layout_height="16dp"
+        android:src="@drawable/backarro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/payment"
+        app:layout_constraintBottom_toBottomOf="@id/payment"
+        android:layout_marginEnd="20dp"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/fifth_divider"
+        android:layout_marginTop="30dp"
+        android:background="#ECE8E8"/>
+
+ <ImageView
+     android:layout_width="18dp"
+     android:layout_height="20dp"
+     android:src="@drawable/promocode"
+     android:id="@+id/promo_code"
+     app:layout_constraintTop_toBottomOf="@id/fifth_divider"
+     app:layout_constraintStart_toStartOf="parent"
+     android:layout_marginTop="30dp"
+     android:layout_marginStart="20dp"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Promo Code"
+     android:textSize="20sp"
+     app:layout_constraintStart_toEndOf="@id/promo_code"
+     app:layout_constraintTop_toTopOf="@id/promo_code"
+     app:layout_constraintBottom_toBottomOf="@id/promo_code"
+     android:layout_marginStart="18dp"/>
+
+ <ImageView
+     android:layout_width="9dp"
+     android:layout_height="16dp"
+     android:src="@drawable/backarro"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="@id/promo_code"
+     app:layout_constraintBottom_toBottomOf="@id/promo_code"
+     android:layout_marginEnd="20dp"/>
+
+
+ <View
+     android:layout_width="0dp"
+     android:layout_height="1dp"
+     app:layout_constraintTop_toBottomOf="@id/promo_code"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:id="@+id/six_divider"
+     android:layout_marginTop="30dp"
+     android:background="#ECE8E8"/>
+
+
+ <ImageView
+     android:layout_width="18dp"
+     android:layout_height="20dp"
+     android:src="@drawable/notification"
+     android:id="@+id/notification"
+     app:layout_constraintTop_toBottomOf="@id/six_divider"
+     app:layout_constraintStart_toStartOf="parent"
+     android:layout_marginTop="30dp"
+     android:layout_marginStart="20dp"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Notifications"
+     android:textSize="20sp"
+     app:layout_constraintStart_toEndOf="@id/notification"
+     app:layout_constraintTop_toTopOf="@id/notification"
+     app:layout_constraintBottom_toBottomOf="@id/notification"
+     android:layout_marginStart="18dp"/>
+
+ <ImageView
+     android:layout_width="9dp"
+     android:layout_height="16dp"
+     android:src="@drawable/backarro"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="@id/notification"
+     app:layout_constraintBottom_toBottomOf="@id/notification"
+     android:layout_marginEnd="20dp"/>
+
+ <View
+     android:layout_width="0dp"
+     android:layout_height="1dp"
+     app:layout_constraintTop_toBottomOf="@id/notification"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     android:id="@+id/seven_divider"
+     android:layout_marginTop="30dp"
+     android:background="#ECE8E8"/>
+
+ <ImageView
+     android:layout_width="18dp"
+     android:layout_height="20dp"
+     android:src="@drawable/help"
+     android:id="@+id/help_label"
+     app:layout_constraintTop_toBottomOf="@id/seven_divider"
+     app:layout_constraintStart_toStartOf="parent"
+     android:layout_marginTop="30dp"
+     android:layout_marginStart="20dp"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="help"
+     android:textSize="20sp"
+     app:layout_constraintStart_toEndOf="@id/help_label"
+     app:layout_constraintTop_toTopOf="@id/help_label"
+     app:layout_constraintBottom_toBottomOf="@id/help_label"
+     android:layout_marginStart="18dp"/>
+
+ <ImageView
+     android:layout_width="9dp"
+     android:layout_height="16dp"
+     android:src="@drawable/backarro"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="@id/help_label"
+     app:layout_constraintBottom_toBottomOf="@id/help_label"
+     android:layout_marginEnd="20dp"/>
+
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  app:layout_constraintTop_toBottomOf="@id/help_label"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:id="@+id/eight_divider"
+                  android:layout_marginTop="30dp"
+                  android:background="#ECE8E8"/>
+
+              <ImageView
+                  android:layout_width="18dp"
+                  android:layout_height="20dp"
+                  android:src="@drawable/about"
+                  android:id="@+id/about_label"
+                  app:layout_constraintTop_toBottomOf="@id/eight_divider"
+                  app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginStart="20dp"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="About"
+                  android:textSize="20sp"
+                  app:layout_constraintStart_toEndOf="@id/about_label"
+                  app:layout_constraintTop_toTopOf="@id/about_label"
+                  app:layout_constraintBottom_toBottomOf="@id/about_label"
+                  android:layout_marginStart="18dp"/>
+
+              <ImageView
+                  android:layout_width="9dp"
+                  android:layout_height="16dp"
+                  android:src="@drawable/backarro"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toTopOf="@id/about_label"
+                  app:layout_constraintBottom_toBottomOf="@id/about_label"
+                  android:layout_marginEnd="20dp"/>
+
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  app:layout_constraintTop_toBottomOf="@id/about_label"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:id="@+id/nine_divider"
+                  android:layout_marginTop="30dp"
+                  android:background="#ECE8E8"/>
+
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:layout_width="0dp"
+                  android:layout_height="70dp"
+                  android:background="#E8DEDE"
+                  android:layout_marginStart="20dp"
+                  android:layout_marginEnd="20dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:id="@+id/logout_btn">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Log Out"
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+                      android:textColor="#FF5722"
+                      android:id="@+id/logout_text"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+
+                  <ImageView
+                      android:layout_width="20dp"
+                      android:layout_height="20dp"
+                      android:src="@drawable/grou"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="@id/logout_text"
+                      app:layout_constraintBottom_toBottomOf="@id/logout_text"
+                      android:layout_marginStart="20dp"/>
+
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+      </ScrollView>
+                  
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="70dp"
+                      android:orientation="horizontal"
+                      android:id="@+id/bottom_nav"
+                      android:layout_marginBottom="20dp"
+                      app:layout_constraintBottom_toBottomOf="parent">
+                      
+                      <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:orientation="vertical">
+
+                          <ImageView
+                              android:layout_width="24dp"
+                              android:layout_height="24dp"
+                              android:src="@drawable/shop"/>
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Shop"
+                              android:textSize="13sp"/>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:orientation="vertical">
+
+                          <ImageView
+                              android:layout_width="24dp"
+                              android:layout_height="24dp"
+                              android:src="@drawable/explor"/>
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Explore"
+                              android:textSize="13sp"/>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:orientation="vertical">
+
+                          <ImageView
+                              android:layout_width="24dp"
+                              android:layout_height="24dp"
+                              android:src="@drawable/cartt"/>
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="cart"
+                              android:textSize="13sp"/>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:orientation="vertical">
+
+                          <ImageView
+                              android:layout_width="24dp"
+                              android:layout_height="24dp"
+                              android:src="@drawable/love"/>
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Favorite"
+                              android:textSize="13sp"/>
+
+
+                      </LinearLayout>
+
+                      <LinearLayout
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:orientation="vertical">
+
+                          <ImageView
+                              android:layout_width="24dp"
+                              android:layout_height="24dp"
+                              android:src="@drawable/accoun"/>
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Account"
+                              android:textSize="13sp"/>
+
+
+                      </LinearLayout>
+                  </LinearLayout>
+
+
+
+
+
+              
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

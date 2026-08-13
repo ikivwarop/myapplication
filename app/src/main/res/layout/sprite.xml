@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/sprite"
+        android:id="@+id/sprite_can"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sprite Can"
+        android:id="@+id/sprite_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/sprite_can"
+        app:layout_constraintTop_toTopOf="@id/sprite_can"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="352ml Price"
+        android:id="@+id/price"
+        app:layout_constraintTop_toBottomOf="@id/sprite_text"
+        app:layout_constraintStart_toStartOf="@id/sprite_text"
+        android:layout_marginTop="4dp"/>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/backarro"
+        android:id="@+id/black_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@id/sprite_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#45"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/black_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/black_arrow"
+        app:layout_constraintTop_toTopOf="@id/black_arrow"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

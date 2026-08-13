@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello one"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/hello_one_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/hello_two_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello three"
+        app:layout_constraintTop_toBottomOf="@id/hello_one_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/hello_three_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello four"
+        app:layout_constraintTop_toBottomOf="@id/hello_two_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/Hello_four_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello five"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/hello_five_label"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello six"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/hello_six_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello seven"
+        app:layout_constraintBottom_toTopOf="@id/hello_five_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/hello_seven_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Hello eight"
+        app:layout_constraintBottom_toTopOf="@id/hello_six_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/hello_eight_label"/>
+
+    <TextView
+        android:id="@+id/hello_nine_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello nine"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/hello_ten_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello ten"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/hello_eleven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello eleven"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello_extra"
+        android:text="hello extra"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/middle_row_flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="hello_nine_label,hello_ten_label,hello_eleven, hello_extra"
+
+        app:flow_horizontalStyle="spread_inside"
+        app:flow_verticalAlign="center"
+        app:flow_horizontalGap="16dp"
+        app:flow_wrapMode="aligned"
+
+        app:layout_constraintTop_toTopOf="@id/middle_guideline"
+        app:layout_constraintBottom_toBottomOf="@id/middle_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/middle_guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline_vertical_50"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/middle_guideline1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello_twelve_label"
+        android:text="hello twelve"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/middle_guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/middle_guideline1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello_thirteen_label"
+        android:text="hello thirteen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/hello_twelve_label"
+        app:layout_constraintTop_toTopOf="@id/middle_guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/middle_guideline1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello_fourteen_label"
+        android:text="hello fourteen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/middle_guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/middle_guideline1"
+        app:layout_constraintStart_toEndOf="@id/hello_thirteen_label"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        android:id="@+id/guideline_"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="hello fifteen"
+        android:id="@+id/fifteen_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/guideline_"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="hello sixteen"
+        android:id="@+id/sixteen_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/guideline_"
+        app:layout_constraintStart_toEndOf="@id/fifteen_label"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="hello seventeen"
+        android:id="@+id/seventeen_label"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/sixteen_label"
+        app:layout_constraintTop_toTopOf="@id/guideline_"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

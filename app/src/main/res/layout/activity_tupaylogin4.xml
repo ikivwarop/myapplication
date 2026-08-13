@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1E8E8"
+    tools:context=".TupayloginActivity4">
+
+    <!-- TOP BAR -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tupay_container"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tupay_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tupay"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/lefarrow"
+            app:layout_constraintTop_toTopOf="@id/tupay_label"
+            app:layout_constraintBottom_toBottomOf="@id/tupay_label"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:textColor="#69D36E"
+            android:textStyle="bold"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="@id/tupay_label"
+            app:layout_constraintBottom_toBottomOf="@id/tupay_label"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- WELCOME TEXT -->
+
+    <TextView
+        android:id="@+id/welcome_back_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@id/tupay_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/institutional_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Institutional-grade security for your digital"
+        android:textSize="16sp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/welcome_back_label"
+        app:layout_constraintStart_toStartOf="@id/welcome_back_label"
+        app:layout_constraintEnd_toEndOf="@id/welcome_back_label"/>
+
+    <TextView
+        android:id="@+id/assets_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="assets."
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/institutional_label"
+        app:layout_constraintStart_toStartOf="@id/institutional_label"
+        app:layout_constraintEnd_toEndOf="@id/institutional_label"/>
+
+    <!-- SCROLLVIEW -->
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="30dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/assets_label"
+        app:layout_constraintBottom_toTopOf="@id/don_have"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollview_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF">
+
+            <!-- EMAIL LABEL -->
+
+            <TextView
+                android:id="@+id/email_or_username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email or Username"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- EMAIL INPUT -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_container"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/email_or_username_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:startIconDrawable="@drawable/messagebox"
+                app:startIconTint="#808080">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="name@company.com"
+                    android:textSize="16sp"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- PASSWORD LABEL -->
+
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/email_container"
+                app:layout_constraintStart_toStartOf="@id/email_container"/>
+
+            <TextView
+                android:id="@+id/forgot_password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#0F8FF4"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/email_container"
+                app:layout_constraintEnd_toEndOf="@id/email_container"/>
+
+            <!-- PASSWORD INPUT -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/password_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:startIconDrawable="@drawable/padlock"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="........."
+                    android:inputType="textPassword"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- LOGIN BUTTON -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:paddingVertical="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintTop_toBottomOf="@id/password_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cornerRadius="12dp"
+                app:backgroundTint="#007A4D"
+                app:icon="@drawable/arro"
+                app:iconGravity="textEnd"
+                app:iconPadding="8dp"/>
+
+            <!-- OR LOGIN -->
+
+            <TextView
+                android:id="@+id/or_login_with_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR LOGIN WITH"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#B5AFAF"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/login_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#DCC9C9"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintTop_toTopOf="@id/or_login_with_label"
+                app:layout_constraintBottom_toBottomOf="@id/or_login_with_label"
+                app:layout_constraintStart_toStartOf="@id/login_button"
+                app:layout_constraintEnd_toStartOf="@id/or_login_with_label"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#DAC5C5"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="@id/or_login_with_label"
+                app:layout_constraintBottom_toBottomOf="@id/or_login_with_label"
+                app:layout_constraintStart_toEndOf="@id/or_login_with_label"
+                app:layout_constraintEnd_toEndOf="@id/login_button"/>
+
+            <!-- BIOMETRIC CONTAINER -->
+
+            <LinearLayout
+                android:id="@+id/biometric_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintTop_toBottomOf="@id/or_login_with_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- BIOMETRIC -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_bg">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/baseline_grid_view_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biometric"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <!-- FACE ID -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_bg">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/baseline_grid_view_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Face ID"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!-- DON'T HAVE ACCOUNT -->
+
+    <LinearLayout
+        android:id="@+id/don_have"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@id/iso_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Don't have an account?"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text=" Sign Up"
+            android:textStyle="bold"
+            android:textColor="#007A4D"/>
+
+    </LinearLayout>
+
+    <!-- ISO CONTAINER -->
+
+    <LinearLayout
+        android:id="@+id/iso_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@id/divider_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- ITEM 1 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                android:background="@drawable/circle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_grid_view_24"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ISO 27001"/>
+
+        </LinearLayout>
+
+        <!-- ITEM 2 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                android:background="@drawable/circle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_grid_view_24"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOC 2"/>
+
+        </LinearLayout>
+
+        <!-- ITEM 3 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                android:background="@drawable/circle">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_grid_view_24"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PCI DSS"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- DIVIDER -->
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#9E9292"
+        app:layout_constraintBottom_toTopOf="@id/your_connection_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- FOOTER -->
+
+    <LinearLayout
+        android:id="@+id/your_connection_container"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_grid_view_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your connection to Tupay is encrypted and secure"
+            android:textSize="14sp"
+            android:textColor="#938888"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

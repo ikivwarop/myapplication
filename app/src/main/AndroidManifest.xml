@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".RecyclerViewPractice4"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".GrofastorderacceptedActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastloginActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastsignupActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofasterrorActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastcheckoutActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastfavoritesActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastmycartActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastfilterActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastsearchActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastbeverageActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastexploreActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastproductdetailActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofasthomescreenActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastaccountActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastelectlocationActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastverificationActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastnumberActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastsigninActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastonboardingActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".GrofastsplashscreenActivity4"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".TupayforgetpActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity44"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity44"
+            android:exported="false" />
+        <activity
+            android:name=".TupayloginActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".TupayasssignupActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".HomepageLanding"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".ExploreActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".HomescreenActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".ProductdetailsActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".Favorite2Activity4"
+            android:exported="false" />
+        <activity
+            android:name=".Account2Activity4"
+            android:exported="false" />
+        <activity
+            android:name=".AccountActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".CheckoutttActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".CheckoutActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".Keypay2UsingLinearLayoutRow"
+            android:exported="false" />
+        <activity
+            android:name=".keypadActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".VerificationActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".NumberActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".BeveragesActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".MainConstraint1"
+            android:exported="false" />
+        <activity
+            android:name=".filterActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".MycartActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".MainFavorite4"
+            android:exported="false" />
+        <activity
+            android:name=".SinginConstraint"
+            android:exported="false" />
+        <activity
+            android:name=".TiktokActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity9"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity8"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".LinearlayoutActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity7"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".LinearlayoutActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeToOurStore"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintguidelinePractise1"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintGuidelinePractise"
+            android:exported="false" />
+        <activity
+            android:name=".Constraint4"
+            android:exported="false" />
+        <activity
+            android:name=".ConstrainText3"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintText2"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".MainNewproject"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+    </application>
+
+</manifest>

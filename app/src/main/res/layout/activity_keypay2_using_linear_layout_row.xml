@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Keypay2UsingLinearLayoutRow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView style="@style/keypadBtn" android:text="1"/>
+            <TextView style="@style/keypadBtn" android:text="2\nABC"/>
+            <TextView style="@style/keypadBtn" android:text="3\nDEF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView style="@style/keypadBtn" android:text="4\nGHI"/>
+
+            <TextView style="@style/keypadBtn" android:text="5\nJKL"/>
+
+            <TextView style="@style/keypadBtn" android:text="6\nMNO"/>
+        </LinearLayout>
+
+        <!-- ROW 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView style="@style/keypadBtn" android:text="7\nPQRS"/>
+
+            <TextView style="@style/keypadBtn" android:text="8\nTUV"/>
+
+            <TextView style="@style/keypadBtn" android:text="9\nWXYZ"/>
+        </LinearLayout>
+
+        <!-- ROW 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- + * # (NO background) -->
+            <TextView
+                style="@style/keypadBtnPlain"
+                android:text="+ * #"/>
+
+            <TextView style="@style/keypadBtn" android:text="0"/>
+
+            <!-- Delete icon -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:src="@drawable/download"
+                android:scaleType="center"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

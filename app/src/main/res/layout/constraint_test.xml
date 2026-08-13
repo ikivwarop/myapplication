@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/hello_one_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hello one asddsdfgyyyyyj"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/hello_two_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hello_two_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Two"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Hello three"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Hello_four_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="Hello fourtututujgjgjrjr"
+        android:gravity="end"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_three" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello_five_label"
+        android:text="Hello fivegjjgjtktgktffffffffertds"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/label_three"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello_one_label"
+        app:layout_constraintEnd_toStartOf="@+id/hello_six_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hello_six_label"
+        android:text="hello six"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/Hello_four_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello_two_label" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="hello seventutututututututujgjggjgjtfjf"
+        android:textSize="25sp"
+        android:id="@+id/hello_seven_label"
+        app:layout_constraintEnd_toStartOf="@id/hello_eight_label"
+        app:layout_constraintTop_toBottomOf="@+id/hello_one_label"
+        app:layout_constraintBottom_toTopOf="@+id/hello_five_label"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/hello_eight_label"
+        android:text="hello eight"
+        app:layout_constraintTop_toBottomOf="@id/hello_two_label"
+        app:layout_constraintBottom_toTopOf="@id/hello_six_label"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="hello ninejfjfjjfjfjfjffjffjjfjjjfjfjjfjjfgjgjjgjj"
+        app:layout_constraintEnd_toStartOf="@id/hello_ten_label"
+        app:layout_constraintTop_toBottomOf="@id/hello_five_label"
+        app:layout_constraintBottom_toTopOf="@id/label_three"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="hello ten"
+        android:id="@+id/hello_ten_label"
+        app:layout_constraintTop_toBottomOf="@id/hello_six_label"
+        app:layout_constraintBottom_toTopOf="@id/Hello_four_label"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="hello eleventutufjfkdjfjjgjgdkdkdfm"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/hello_twelve_label"
+        app:layout_constraintTop_toBottomOf="@id/hello_one_label"
+        app:layout_constraintBottom_toTopOf="@id/hello_seven_label"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/hello_twelve_label"
+        android:text="hello twelve"
+        app:layout_constraintTop_toBottomOf="@id/hello_two_label"
+        app:layout_constraintBottom_toTopOf="@id/hello_eight_label"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

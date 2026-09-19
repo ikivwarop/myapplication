@@ -1,11 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.inputmethod.TextBoundsInfo
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.example.myapplication.GrofasthomescreenActivity4
+import com.example.myapplication.signup.GrofastsignupActivity4
+import com.example.myapplication.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -15,28 +17,15 @@ class GrofastloginActivity4 : AppCompatActivity() {
         setContentView(R.layout.activity_grofastlogin4)
 
         val emailAddress = findViewById<TextInputEditText>(R.id.email_address_input)
-        emailAddress.setOnClickListener {
-            AlertDialog.Builder(this)
-                    .setMessage("Enter your email address")
-                    .setPositiveButton("Ok", null)
-                    .show()
-        }
-        val email = emailAddress.text.toString()
+
+
 
         val password = findViewById<TextInputEditText>(R.id.password_input)
-        password.setOnClickListener {
-            AlertDialog.Builder(this)
-                    .setMessage("Enter your password")
-                    .setPositiveButton("Ok", null)
-                    .show()
 
-        }
-        val passwordText = password.text.toString()
+
 
         val forgotPassword = findViewById<TextView>(R.id.forget_password_label)
-        forgotPassword.setOnClickListener {
 
-        }
 
         val materialButton = findViewById<MaterialButton>(R.id.login_button)
         materialButton.setOnClickListener {

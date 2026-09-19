@@ -20,17 +20,14 @@ class GrofastnumberActivity4 : AppCompatActivity() {
 
         val countryCode = intent.getStringExtra("countryCode")
         val countryCodeTv = findViewById<TextView>(R.id.country_code_tv)
-        countryCodeTv.text = countryCode ?: "+234"
+        countryCodeTv.text = countryCode ?: ""
 
         val phoneEdit = findViewById<TextInputEditText>(R.id.phone_edittext)
         phoneEdit.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             if (hasFocus && !hasShownPhoneDialog) {
                 hasShownPhoneDialog = true
 
-            AlertDialog.Builder(this)
-                    .setMessage("Phone number field")
-                    .setPositiveButton("Ok", null)
-                    .show()
+
         }
     }
 

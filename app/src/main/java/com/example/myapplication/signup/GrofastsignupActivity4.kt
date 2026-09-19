@@ -1,10 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.example.myapplication.GrofasthomescreenActivity4
+import com.example.myapplication.R
+import com.example.myapplication.login.GrofastloginActivity4
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -14,30 +17,13 @@ class GrofastsignupActivity4 : AppCompatActivity() {
         setContentView(R.layout.activity_grofastsignup4)
 
         val username = findViewById<TextInputEditText>(R.id.username_input)
-        username.setOnClickListener {
-            AlertDialog.Builder(this)
-                    .setMessage("Enter your username")
-                    .setPositiveButton("Ok", null)
-                    .show()
 
-
-        }
 
         val email = findViewById<TextInputEditText>(R.id.email_input)
-        email.setOnClickListener {
-            AlertDialog.Builder(this)
-                    .setMessage("Enter your email")
-                    .setPositiveButton("Ok", null)
-                    .show()
-        }
+
 
         val password = findViewById<TextInputEditText>(R.id.password_input)
-        password.setOnClickListener {
-            AlertDialog.Builder(this)
-                    .setMessage("Enter your password correctly")
-                    .setPositiveButton("Ok", null)
-                    .show()
-        }
+
 
         val signUpButton = findViewById<MaterialButton>(R.id.signup_btn)
 

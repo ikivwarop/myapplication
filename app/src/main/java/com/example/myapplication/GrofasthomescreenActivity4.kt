@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -136,5 +137,13 @@ class GrofasthomescreenActivity4 : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        val searchStore = findViewById<EditText>(R.id.search_store)
+
+        searchStore.setOnClickListener{
+            val intent = Intent(this, GrofastsearchActivity4::class.java)
+            startActivity(intent)
+        }
     }
+
 }

@@ -35,7 +35,6 @@ class GrofastverificationActivity4 : AppCompatActivity() {
         moveToNext(otp3, otp4)
 
         nextButton.setOnClickListener {
-
             val otp = otp1.text.toString() +
                     otp2.text.toString() +
                     otp3.text.toString() +

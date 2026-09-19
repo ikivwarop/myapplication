@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SinginConstraint">
+    tools:context=".signup.GrofastsigninActivity4">
 
     <ScrollView
         android:layout_width="0dp"
@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
-        android:textColor="#FF5722"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginStart="24dp"
@@ -89,9 +89,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Or connect with social media"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#FF5722"
+        android:textSize="13sp"
+        android:textColor="#888888"
         android:id="@+id/or_connect"
         app:layout_constraintTop_toBottomOf="@id/country_code_layout"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +103,7 @@
         android:layout_height="60dp"
         android:id="@+id/googleBtn"
         android:text="Continue with Google"
-        android:textColor="#FF5722"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:backgroundTint="#5383EC"
@@ -128,12 +127,12 @@
         app:icon="@drawable/facebook"
         app:iconGravity="textStart"
         android:id="@+id/facebookBtn"
-        android:textColor="#FF5722"
+        android:textColor="@color/white"
         app:cornerRadius="16dp"
         android:layout_marginTop="16dp"
         android:text="Continue with Facebook"
         app:iconPadding="16dp"
-        android:backgroundTint="#5383EC"
+        android:backgroundTint="#3B5998"
         android:textAllCaps="false"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

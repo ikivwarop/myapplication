@@ -35,7 +35,7 @@ class GrofastexploreActivity4 : AppCompatActivity() {
 
                 "beverage" -> {
                     val intent = Intent(this, GrofastbeverageActivity4::class.java)
-                    intent.putExtra("category", )
+                    intent.putExtra("category", product.id)
                     startActivity(intent)
                 }
 

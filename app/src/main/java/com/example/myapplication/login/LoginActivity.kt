@@ -1,6 +1,7 @@
-package com.example.myapplication.auth
+package com.example.myapplication.login
 import com.example.myapplication.R
 import com.example.myapplication.home.HomeActivity
+import com.example.myapplication.signup.SignUpActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

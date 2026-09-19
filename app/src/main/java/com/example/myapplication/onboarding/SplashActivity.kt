@@ -1,4 +1,4 @@
-package com.example.myapplication.auth
+package com.example.myapplication.onboarding
 import com.example.myapplication.R
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

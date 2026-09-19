@@ -8,7 +8,7 @@
 
     <!-- Product Image -->
     <ImageView
-        android:id="@+id/banana"
+        android:id="@+id/item_image"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:src="@drawable/banana"
@@ -18,39 +18,37 @@
 
     <!-- Product Name -->
     <TextView
-        android:id="@+id/organic"
+        android:id="@+id/item_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Organic Bananas"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#000"
 
         android:layout_marginStart="12dp"
-        app:layout_constraintStart_toEndOf="@id/banana"
-        app:layout_constraintTop_toTopOf="@id/banana"
-        app:layout_constraintEnd_toStartOf="@id/btnDelete"/>
+        app:layout_constraintStart_toEndOf="@id/item_image"
+        app:layout_constraintTop_toTopOf="@id/item_image"
+        app:layout_constraintEnd_toStartOf="@id/delete_button"/>
 
     <!-- Description -->
     <TextView
-        android:id="@+id/pcs"
+        android:id="@+id/item_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7pcs, Price"
         android:textSize="14sp"
         android:textColor="#888"
         android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@id/organic"
-        app:layout_constraintTop_toBottomOf="@id/organic"/>
+        app:layout_constraintStart_toStartOf="@id/item_name"
+        app:layout_constraintTop_toBottomOf="@id/item_name"/>
 
     <!-- Delete Icon -->
     <ImageView
-        android:id="@+id/btnDelete"
+        android:id="@+id/delete_button"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:src="@drawable/cance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/organic"/>
+        app:layout_constraintTop_toTopOf="@id/item_name"/>
 
     <!-- Quantity Layout -->
     <LinearLayout
@@ -59,15 +57,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/organic"
-        app:layout_constraintTop_toBottomOf="@id/pcs">
+        app:layout_constraintStart_toStartOf="@id/item_name"
+        app:layout_constraintTop_toBottomOf="@id/item_weight">
 
         <ImageView
+            android:id="@+id/decrease_quantity"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:src="@drawable/minus"/>
 
         <TextView
+            android:id="@+id/quantity"
             android:layout_width="40dp"
             android:layout_height="46dp"
             android:gravity="center"
@@ -75,6 +75,7 @@
             android:textStyle="bold"/>
 
         <ImageView
+            android:id="@+id/increase_quantity"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:src="@drawable/plus"/>
@@ -82,10 +83,9 @@
 
     <!-- Price -->
     <TextView
-        android:id="@+id/tvPrice"
+        android:id="@+id/item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="₹100"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="#000"

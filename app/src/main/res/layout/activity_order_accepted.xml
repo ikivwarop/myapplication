@@ -26,20 +26,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Order has been&#10; accepted"
+        android:text="Your Order has been&#10;accepted"
         android:id="@+id/your_order"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/group_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="23dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your items has been placed and it's on&#10; it way to been processed"
+        android:text="Your items have been placed and are on&#10;their way to being processed"
         android:gravity="center"
         android:id="@+id/your_items"
         app:layout_constraintTop_toBottomOf="@id/your_order"
@@ -63,6 +63,7 @@
         android:padding="5dp"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_to_home_button"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         app:layout_constraintStart_toStartOf="parent"

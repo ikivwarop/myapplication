@@ -1,5 +1,6 @@
 package com.example.myapplication.search
 import com.example.myapplication.R
+import com.example.myapplication.cart.CartManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,8 +37,8 @@ class SearchAdapter(
         holder.productWeight.text = search.weight
         holder.productPrice.text = search.price
 
-        // ponytail: no shared cart state yet - real add-to-cart wiring belongs with the Cart screen pass
         holder.addButton.setOnClickListener {
+            CartManager.add(search.image, search.name, search.weight, search.price)
             Toast.makeText(it.context, "${search.name} added to cart", Toast.LENGTH_SHORT).show()
         }
     }

@@ -1,5 +1,6 @@
 package com.example.myapplication.explore
 import com.example.myapplication.R
+import com.example.myapplication.cart.CartManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,8 +43,8 @@ class CategoryProductAdapter (
             onClick(beverage)
         }
 
-        // ponytail: no shared cart state yet - real add-to-cart wiring belongs with the Cart screen pass
         holder.itemAdd.setOnClickListener {
+            CartManager.add(beverage.image, beverage.name, beverage.weight, beverage.price)
             Toast.makeText(it.context, "${beverage.name} added to cart", Toast.LENGTH_SHORT).show()
         }
     }

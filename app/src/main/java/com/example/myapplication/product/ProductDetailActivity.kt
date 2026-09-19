@@ -1,7 +1,10 @@
 package com.example.myapplication.product
 import com.example.myapplication.R
+import com.example.myapplication.cart.CartManager
+import com.example.myapplication.favorites.FavoritesManager
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -63,9 +66,20 @@ class ProductDetailActivity :   AppCompatActivity() {
         }
         productDetailsChevron.setOnClickListener { productDetailsHeader.performClick() }
 
-        // ponytail: no shared cart state yet - real add-to-cart wiring belongs with the Cart screen pass
         findViewById<Button>(R.id.button).setOnClickListener {
+            CartManager.add(image, name ?: "", weight ?: "", price ?: "", quantity)
             Toast.makeText(this, "$name added to cart", Toast.LENGTH_SHORT).show()
+        }
+
+        val favoriteButton = findViewById<ImageView>(R.id.favorite_button)
+        fun updateFavoriteIcon() {
+            val isFavorite = FavoritesManager.isFavorite(name ?: "")
+            favoriteButton.setColorFilter(if (isFavorite) Color.RED else Color.BLACK)
+        }
+        updateFavoriteIcon()
+        favoriteButton.setOnClickListener {
+            FavoritesManager.toggle(image, name ?: "", weight ?: "", price ?: "")
+            updateFavoriteIcon()
         }
     }
 }

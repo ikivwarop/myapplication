@@ -28,8 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="Filters"
                 android:id="@+id/filters"
-                android:textStyle="bold"
-                android:textSize="25sp"
+                style="@style/ScreenTitle"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>

@@ -3,9 +3,11 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.beverage.GrofastbeverageActivity4
 
 class GrofastexploreActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +20,7 @@ class GrofastexploreActivity4 : AppCompatActivity() {
                 FindProduct("meat_fish", R.drawable.meat, "Meat and fish"),
                 FindProduct("bakery_snacks", R.drawable.snacks, "Bakery and snacks"),
                 FindProduct("dairy_eggs", R.drawable.eggs, "Dairy and eggs"),
-                FindProduct("beverage", R.drawable.beveragess, "Beverages"),
+                FindProduct("beverages", R.drawable.beveragess, "Beverages"),
                 FindProduct("fresh_fruits", R.drawable.frshfruit, "Fresh fruits and vegetables"),
                 FindProduct("cooking_oil", R.drawable.coconutoil, "Cooking oil and gree")
 
@@ -33,17 +35,49 @@ class GrofastexploreActivity4 : AppCompatActivity() {
 
             when(product.id){
 
-                "beverage" -> {
+                "beverages" -> {
+                    val intent = Intent(this, GrofastbeverageActivity4::class.java)
+                    
+                    intent.putExtra("category", product.id )
+                    startActivity(intent)
+                }
+
+                "meat_fish" ->
+                    {
+                        val intent = Intent(this, GrofastbeverageActivity4::class.java)
+                        intent.putExtra("category", product.id )
+                startActivity(intent)
+                }
+
+
+                "dairy_eggs" ->
+
+                    {
+                        val intent = Intent(this, GrofastbeverageActivity4::class.java)
+                        intent.putExtra("category", product.id )
+                startActivity(intent)
+                    }
+
+                "cooking_oil" ->
+                {
+                    val intent = Intent(this, GrofastbeverageActivity4::class.java)
+                intent.putExtra("category", product.id)
+                startActivity(intent)
+                }
+
+                "fresh_fruits" ->
+                {
+                    val intent = Intent(this, GrofastbeverageActivity4::class.java)
+                intent.putExtra("category", product.id)
+                startActivity(intent)
+                }
+
+                "bakery_snacks" -> {
                     val intent = Intent(this, GrofastbeverageActivity4::class.java)
                     intent.putExtra("category", product.id)
                     startActivity(intent)
                 }
 
-                "meat_fish" -> {val intent = Intent(this, GrofastbeverageActivity4::class.java)
-                startActivity(intent)
-                }
-                "dairy_eggs" -> {val intent = Intent(this, GrofastbeverageActivity4::class.java)
-                startActivity(intent)}
             }
 
 
@@ -52,7 +86,6 @@ class GrofastexploreActivity4 : AppCompatActivity() {
 
 
     val shop = findViewById<LinearLayout>(R.id.explore_shop)
-
         shop.setOnClickListener {
 
             val intent = Intent(this, GrofasthomescreenActivity4::class.java)
@@ -77,6 +110,16 @@ class GrofastexploreActivity4 : AppCompatActivity() {
             val intent = Intent(this, GrofastaccountActivity4::class.java)
             startActivity(intent)
             finish()
+        }
+
+        val search = findViewById<EditText>(R.id.search_store)
+        search.setOnClickListener {
+
+            val intent = Intent(this, GrofastsearchActivity4::class.java)
+
+            startActivity(intent)
+
+
         }
     }
 }

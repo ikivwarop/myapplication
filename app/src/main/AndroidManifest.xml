@@ -21,10 +21,10 @@
             android:name=".GrofastorderacceptedActivity4"
             android:exported="false" />
         <activity
-            android:name=".GrofastloginActivity4"
+            android:name=".login.GrofastloginActivity4"
             android:exported="false" />
         <activity
-            android:name=".GrofastsignupActivity4"
+            android:name=".signup.GrofastsignupActivity4"
             android:exported="false" />
         <activity
             android:name=".GrofasterrorActivity4"
@@ -45,7 +45,7 @@
             android:name=".GrofastsearchActivity4"
             android:exported="false" />
         <activity
-            android:name=".GrofastbeverageActivity4"
+            android:name=".beverage.GrofastbeverageActivity4"
             android:exported="false" />
         <activity
             android:name=".GrofastexploreActivity4"
@@ -69,7 +69,7 @@
             android:name=".GrofastnumberActivity4"
             android:exported="false" />
         <activity
-            android:name=".GrofastsigninActivity4"
+            android:name=".signup.GrofastsigninActivity4"
             android:exported="false" />
         <activity
             android:name=".GrofastonboardingActivity4"

@@ -14,7 +14,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".GrofastsplashscreenActivity4"
+            android:name=".auth.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,61 +23,61 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GrofastonboardingActivity4"
+            android:name=".auth.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".signup.GrofastsigninActivity4"
+            android:name=".auth.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastnumberActivity4"
+            android:name=".auth.PhoneNumberActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastverificationActivity4"
+            android:name=".auth.VerificationActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastelectlocationActivity4"
+            android:name=".auth.SelectLocationActivity"
             android:exported="false" />
         <activity
-            android:name=".login.GrofastloginActivity4"
+            android:name=".auth.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".signup.GrofastsignupActivity4"
+            android:name=".auth.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofasthomescreenActivity4"
+            android:name=".home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastproductdetailActivity4"
+            android:name=".product.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastexploreActivity4"
+            android:name=".explore.ExploreActivity"
             android:exported="false" />
         <activity
-            android:name=".beverage.GrofastbeverageActivity4"
+            android:name=".explore.CategoryProductsActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastsearchActivity4"
+            android:name=".search.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastfilterActivity4"
+            android:name=".search.FilterActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastmycartActivity4"
+            android:name=".cart.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastfavoritesActivity4"
+            android:name=".favorites.FavoritesActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastcheckoutActivity4"
+            android:name=".checkout.CheckoutActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastorderacceptedActivity4"
+            android:name=".checkout.OrderAcceptedActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofasterrorActivity4"
+            android:name=".checkout.OrderErrorActivity"
             android:exported="false" />
         <activity
-            android:name=".GrofastaccountActivity4"
+            android:name=".account.AccountActivity"
             android:exported="false" />
     </application>
 

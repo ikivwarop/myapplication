@@ -9,12 +9,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class GrofasthomescreenActivity4 : AppCompatActivity() {
+class GrofasthomescreenActivity4 : BaseActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grofasthomescreen4)
+        setupBottomNavigation()
 
 
         val productList = listOf(
@@ -111,39 +112,6 @@ class GrofasthomescreenActivity4 : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-        val explore = findViewById<LinearLayout>(R.id.explore)
-        explore.setOnClickListener {
-            val intent = Intent(this, GrofastexploreActivity4::class.java)
-            startActivity(intent)
-            finish()
-
-        }
-        val myCart = findViewById<LinearLayout>(R.id.my_cart_label)
-        myCart.setOnClickListener {
-            val intent = Intent(this, GrofastmycartActivity4::class.java)
-            startActivity(intent)
-            finish()
-        }
-        val favorite = findViewById<LinearLayout>(R.id.favorite)
-        favorite.setOnClickListener {
-            val intent = Intent(this, GrofastfavoritesActivity4::class.java)
-            startActivity(intent)
-            finish()
-        }
-        val account = findViewById<LinearLayout>(R.id.account)
-        account.setOnClickListener {
-            val intent = Intent(this, GrofastaccountActivity4::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        val searchStore = findViewById<EditText>(R.id.search_store)
-
-        searchStore.setOnClickListener{
-            val intent = Intent(this, GrofastsearchActivity4::class.java)
-            startActivity(intent)
-        }
     }
 
 }

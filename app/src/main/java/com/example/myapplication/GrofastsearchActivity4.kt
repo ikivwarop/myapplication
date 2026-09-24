@@ -13,46 +13,55 @@ import androidx.recyclerview.widget.RecyclerView
 
 class GrofastsearchActivity4 : AppCompatActivity() {
 
-    val productList = listOf(
 
-            SearchProduct(R.drawable.eg, "Abhi Gold+ Brown eggs", "6pcs price", "₦81", "Eggs"),
-
-            SearchProduct(R.drawable.egg, "Egg chicken white", "6pcs price", "₦69", "Eggs"),
-
-            SearchProduct(R.drawable.everbest, "Everbest egg curry masala", "50gm price", "₦48", "Eggs"),
-
-            SearchProduct(R.drawable.eggnoodles, "Egg Noodles", "2L price", "₦200", "Noodles and Pasta"),
-
-            SearchProduct(R.drawable.eletricegg, "Eletric egg boiler", "2L price", "₦150", ""),
-
-            SearchProduct(R.drawable.boiler, "Lifelong 2 in 1 egg boiler and poacher", "3L price", "₦120", ""))
 
     private lateinit var adapter: SearchAdapter
-
-    private val filterResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-
-                if (result.resultCode == RESULT_OK) {
-
-                    val categories = result.data?.getStringArrayListExtra("categories")
-                            ?: arrayListOf()
+    private lateinit var searchEditText: EditText
+    private var filteredProductList = emptyList<SearchProduct>()
+    private var isFilterActive = false
 
 
-
-                        val filteredList = productList.filter { product ->
-                            product.category in categories
-                        }
-
-                        adapter.updateList(filteredList)
-                    }
-                }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grofastsearch4)
 
+        val productList = listOf(
 
+                SearchProduct(R.drawable.eg, "Abhi Gold+ Brown eggs", "6pcs price", "₦81", "Eggs"),
+
+                SearchProduct(R.drawable.egg, "Egg chicken white", "6pcs price", "₦69", "Eggs"),
+
+                SearchProduct(R.drawable.everbest, "Everbest egg curry masala", "50gm price", "₦48", "Eggs"),
+
+                SearchProduct(R.drawable.eggnoodles, "Egg Noodles", "2L price", "₦200", "Noodles and Pasta"),
+
+                SearchProduct(R.drawable.eletricegg, "Eletric egg boiler", "2L price", "₦150", ""),
+
+                SearchProduct(R.drawable.boiler, "Lifelong 2 in 1 egg boiler and poacher", "3L price", "₦120", ""))
+
+         val filterResult =
+                registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+
+                    if (result.resultCode == RESULT_OK) {
+
+                        val categories = result.data?.getStringArrayListExtra("categories")
+                                ?: arrayListOf()
+
+
+
+                        filteredProductList = productList.filter { product ->
+                            product.category in categories
+                        }
+
+                        isFilterActive = categories.isNotEmpty()
+
+                        searchEditText.text.clear()
+
+                        adapter.updateList(filteredProductList)
+                    }
+                }
 
         val recycler = findViewById<RecyclerView>(R.id.search_recyclerview)
         recycler.layoutManager = GridLayoutManager(this, 2)
@@ -61,14 +70,18 @@ class GrofastsearchActivity4 : AppCompatActivity() {
         recycler.adapter = adapter
 
 
-        val searchEditText = findViewById<EditText>(R.id.search_edit_text)
+         searchEditText = findViewById(R.id.search_edit_text)
 
         searchEditText.addTextChangedListener { text ->
 
             val searchText = text.toString().trim()
 
             if (searchText.isEmpty()) {
-                adapter.updateList(emptyList())
+                if (isFilterActive) {
+                    adapter.updateList(filteredProductList)
+                } else {
+                    adapter.updateList(emptyList())
+                }
             } else {
                 val filteredList = productList.filter { product ->
                     product.name.contains(searchText, ignoreCase = true)

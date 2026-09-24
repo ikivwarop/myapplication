@@ -29,7 +29,12 @@ class GrofastfilterActivity4 : AppCompatActivity() {
             }
 
             if (noodleAndPasta.isChecked) {
-               selectedCategories.add("noodleAndPasta")
+               selectedCategories.add("Noodles and Pasta")
+            }
+
+            if (selectedCategories.isEmpty()){
+                Toast.makeText(this,"Please Select a filter", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
 
             val intent = Intent()
